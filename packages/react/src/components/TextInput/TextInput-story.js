@@ -301,7 +301,7 @@ export const Animation3 = () => (
   </div>
 );
 
-Animation3.storyName = 'Animation Three: Underline/Opacity - simultaneous, from center';
+Animation3.storyName = '3: Underline/Opacity - simultaneous, from center';
 Animation3.parameters = {
   info: {
     text: `
@@ -323,7 +323,7 @@ export const Animation4 = () => (
   </div>
 );
 
-Animation4.storyName = 'Animation Four: Underline/Opacity - staggered, from center';
+Animation4.storyName = '4: Underline/Opacity - staggered, from center';
 Animation4.parameters = {
   info: {
     text: `
@@ -345,7 +345,7 @@ export const Animation5 = () => (
   </div>
 );
 
-Animation5.storyName = 'Animation Five: Underline/Opacity - staggered, from L to R';
+Animation5.storyName = '5: Underline/Opacity - staggered, from L to R';
 Animation5.parameters = {
   info: {
     text: `
@@ -367,7 +367,7 @@ export const Animation6 = () => (
   </div>
 );
 
-Animation6.storyName = 'Animation Six: Icon shakes L-R with full border';
+Animation6.storyName = '6: Icon shakes L-R with full border';
 Animation6.parameters = {
   info: {
     text: `
@@ -389,7 +389,7 @@ export const Animation7 = () => (
   </div>
 );
 
-Animation7.storyName = 'Animation Seven: Icon shakes L-R; underline only';
+Animation7.storyName = '7: Icon shakes L-R; underline only';
 Animation7.parameters = {
   info: {
     text: `
@@ -411,7 +411,7 @@ export const Animation8 = () => (
   </div>
 );
 
-Animation8.storyName = 'Animation Eight: Rotate icon with full border';
+Animation8.storyName = '8: Rotate icon with full border';
 Animation8.parameters = {
   info: {
     text: `
@@ -433,7 +433,7 @@ export const Animation9 = () => (
   </div>
 );
 
-Animation9.storyName = 'Animation Nine: Rotate icon with underline only';
+Animation9.storyName = '9: Rotate icon with underline only';
 Animation9.parameters = {
   info: {
     text: `
