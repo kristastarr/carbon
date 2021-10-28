@@ -335,7 +335,8 @@
 
   .input-animation-three,
   .input-animation-four,
-  .input-animation-five {
+  .input-animation-five,
+  .input-animation-ten {
     input[data-invalid]:not(:focus),
     .bx--text-input__field-wrapper[data-invalid]
       > .bx--text-input--invalid:not(:focus) {
@@ -365,7 +366,8 @@
     }
   }
 
-  .input-animation-three {
+  .input-animation-three,
+  .input-animation-ten {
     .bx--text-input__field-wrapper[data-invalid] + .underline {
       width: 0;
       height: 2px;
@@ -377,6 +379,7 @@
 
   .input-animation-four,
   .input-animation-five {
+    // .input-animation-ten {
     .bx--text-input-wrapper {
       .bx--text-input__invalid-icon,
       .bx--form-requirement {
@@ -402,11 +405,19 @@
   }
 
   .input-animation-six,
-  .input-animation-seven {
+  .input-animation-seven,
+  .input-animation-ten {
     .bx--text-input__invalid-icon {
       transform: translateY(-50%);
       animation: $duration--slow-02 low-key-shake 0.1s
-        motion(standard, productive) forwards;
+        motion(standard, productive) forwards !important;
+    }
+  }
+
+  .input-animation-ten {
+    .bx--text-input__invalid-icon {
+      animation: 1s icon-ten forwards,
+        $duration--slow-02 low-key-shake 0.25s forwards !important;
     }
   }
 
@@ -464,6 +475,19 @@
   // }
 
   // keyframes
+
+  @keyframes icon-ten {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   @keyframes move-helper-text {
     100% {
       // transform: translate(16px, -32px);
