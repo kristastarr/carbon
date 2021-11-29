@@ -11,7 +11,8 @@
     "actions/*",
     "codemods",
     "config/*",
-    "packages/*"
+    "packages/*",
+    "www"
   ],
   "scripts": {
     "build": "lerna run build --stream --prefix --npm-client yarn",
@@ -20,7 +21,7 @@
     "doctoc": "doctoc --title '## Table of Contents'",
     "format": "prettier --write '**/*.{js,md,scss,ts}' '!**/{build,es,lib,storybook,ts,umd}/**'",
     "format:diff": "prettier --list-different '**/*.{js,md,scss,ts}' '!**/{build,es,lib,storybook,ts,umd}/**' '!packages/components/**'",
-    "lint": "eslint actions config codemods packages",
+    "lint": "eslint actions config codemods packages www",
     "lint:styles": "stylelint '**/*.{css,scss}' --report-needless-disables --report-invalid-scope-disables",
     "sync": "carbon-cli sync",
     "test": "cross-env BABEL_ENV=test jest",
@@ -30,10 +31,10 @@
   "resolutions": {
     "ast-types": "^0.14.0",
     "node-sass": "^6.0.0",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-is": "~16.9.0",
-    "react-test-renderer": "~16.9.0"
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "react-is": "~17.0.2",
+    "react-test-renderer": "~17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -66,8 +67,8 @@
     "lint-staged": "^11.1.1",
     "node-gyp": "^7.1.2",
     "prettier": "^2.2.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rimraf": "^3.0.0",
     "stylelint": "^13.13.1"
   },
