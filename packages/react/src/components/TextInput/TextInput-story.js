@@ -290,7 +290,6 @@ Animation2.parameters = {
   },
 };
 
-
 export const Animation3 = () => (
   <div className={'input-animation-three'}>
     <TextInput
@@ -467,7 +466,7 @@ AnimationZ.parameters = {
   },
 };
 
-export const Animation11 = () => (
+export const AnimationZ1 = () => (
   <div className={'input-animation-eleven'}>
     <TextInput
       type={select('Form control type (type)', types, 'text')}
@@ -477,8 +476,9 @@ export const Animation11 = () => (
   </div>
 );
 
-Animation11.storyName = '11: Line draws and increases in height; snappy shake of icon';
-Animation11.parameters = {
+AnimationZ1.storyName =
+  '11: Line draws and increases in height; snappy shake of icon';
+AnimationZ1.parameters = {
   info: {
     text: `
         Text fields enable the user to interact with and input data. A single line
@@ -489,8 +489,7 @@ Animation11.parameters = {
   },
 };
 
-
-export const Animation12 = () => (
+export const AnimationZ2 = () => (
   <div className={'input-animation-twelve'}>
     <TextInput
       type={select('Form control type (type)', types, 'text')}
@@ -500,8 +499,8 @@ export const Animation12 = () => (
   </div>
 );
 
-Animation12.storyName = '12: Line draws and increases in height; icon pops';
-Animation12.parameters = {
+AnimationZ2.storyName = '12: Line draws and increases in height; icon pops';
+AnimationZ2.parameters = {
   info: {
     text: `
         Text fields enable the user to interact with and input data. A single line
@@ -512,19 +511,18 @@ Animation12.parameters = {
   },
 };
 
-export const Animation13 = () => (
+export const AnimationZ3 = () => (
   <div className={'input-animation-thirteen'}>
     <TextInput
       type={select('Form control type (type)', types, 'text')}
-      id="animation12"
       {...props.SharedInputProps()}
       {...props.TextInputProps()}
     />
   </div>
 );
 
-Animation13.storyName = '13: Line height increases; bounce icon vertically';
-Animation13.parameters = {
+AnimationZ3.storyName = '13: Line height increases; bounce icon vertically';
+AnimationZ3.parameters = {
   info: {
     text: `
         Text fields enable the user to interact with and input data. A single line
@@ -535,12 +533,10 @@ Animation13.parameters = {
   },
 };
 
-
 // export const Animation14 = () => (
 //   <div className={'input-animation-fourteen'}>
 //     <TextInput
 //       type={select('Form control type (type)', types, 'text')}
-//       id="animation12"
 //       {...props.SharedInputProps()}
 //       {...props.TextInputProps()}
 //     />
