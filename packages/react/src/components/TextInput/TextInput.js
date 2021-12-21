@@ -157,29 +157,32 @@ const TextInput = React.forwardRef(function TextInput(
   const { isFluid } = useContext(FormContext);
 
   return (
-    <div className={inputWrapperClasses}>
-      {!inline ? (
-        label
-      ) : (
-        <div className={`${prefix}--text-input__label-helper-wrapper`}>
-          {label}
-          {!isFluid && helper}
-        </div>
-      )}
-      <div className={fieldOuterWrapperClasses}>
-        <div
-          className={fieldWrapperClasses}
-          data-invalid={normalizedProps.invalid || null}>
-          {normalizedProps.icon && (
-            <normalizedProps.icon className={iconClasses} />
-          )}
-          {input}
+    <div className="input--outer-container">
+      <div className={inputWrapperClasses}>
+        {!inline ? (
+          label
+        ) : (
+          <div className={`${prefix}--text-input__label-helper-wrapper`}>
+            {label}
+            {!isFluid && helper}
+          </div>
+        )}
+        <div className={fieldOuterWrapperClasses}>
+          <div
+            className={fieldWrapperClasses}
+            data-invalid={normalizedProps.invalid || null}
+          >
+            {normalizedProps.icon && (
+              <normalizedProps.icon className={iconClasses} />
+            )}
+            {input}
 
-          {isFluid && <hr className={`${prefix}--text-input__divider`} />}
-          {isFluid && !inline && normalizedProps.validation}
+            {isFluid && <hr className={`${prefix}--text-input__divider`} />}
+            {isFluid && !inline && normalizedProps.validation}
+          </div>
+          <span className="underline"></span>
+          {!isFluid && !inline && (normalizedProps.validation || helper)}
         </div>
-        <span className="underline"></span>
-        {!isFluid && !inline && (normalizedProps.validation || helper)}
       </div>
     </div>
   );

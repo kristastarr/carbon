@@ -336,7 +336,10 @@
   .input-animation-three,
   .input-animation-four,
   .input-animation-five,
-  .input-animation-ten {
+  .input-animation-ten,
+  .input-animation-eleven,
+  .input-animation-twelve,
+  .input-animation-thirteen {
     input[data-invalid]:not(:focus),
     .bx--text-input__field-wrapper[data-invalid]
       > .bx--text-input--invalid:not(:focus) {
@@ -344,9 +347,8 @@
     }
 
     .bx--text-input-wrapper {
-      .bx--text-input__invalid-icon,
-      .bx--form-requirement {
-        animation: 120ms fade-in 120ms cubic-bezier(0.2, 0, 0.38, 0.9) forwards;
+      .bx--form-requirement,
+      .bx--text-input__invalid-icon {
         opacity: 0;
       }
     }
@@ -367,24 +369,13 @@
   }
 
   .input-animation-three,
-  .input-animation-ten {
-    .bx--text-input__field-wrapper[data-invalid] + .underline {
-      width: 0;
-      height: 2px;
-      background-color: #da1e28;
-      animation: $duration--moderate-02 draw-underline
-        motion(standard, productive) forwards;
-    }
-  }
-
   .input-animation-four,
-  .input-animation-five {
-    // .input-animation-ten {
+  .input-animation-five,
+  .input-animation-ten {
     .bx--text-input-wrapper {
-      .bx--text-input__invalid-icon,
-      .bx--form-requirement {
-        animation: 240ms fade-in 120ms cubic-bezier(0.2, 0, 0.38, 0.9) forwards;
-        opacity: 0;
+      .bx--form-requirement,
+      .bx--text-input__invalid-icon {
+        animation: 120ms fade-in 120ms cubic-bezier(0.2, 0, 0.38, 0.9) forwards;
       }
     }
 
@@ -397,6 +388,17 @@
     }
   }
 
+  // .input-animation-four,
+  // .input-animation-five {
+  //   .bx--text-input-wrapper {
+  //     .bx--text-input__invalid-icon,
+  //     .bx--form-requirement {
+  //       animation: 240ms fade-in 120ms cubic-bezier(0.2, 0, 0.38, 0.9) forwards;
+  //       opacity: 0;
+  //     }
+  //   }
+  // }
+
   .input-animation-five {
     .bx--text-input__field-wrapper[data-invalid] + .underline {
       margin-left: auto;
@@ -405,8 +407,7 @@
   }
 
   .input-animation-six,
-  .input-animation-seven,
-  .input-animation-ten {
+  .input-animation-seven {
     .bx--text-input__invalid-icon {
       transform: translateY(-50%);
       animation: $duration--slow-02 low-key-shake 0.1s
@@ -440,10 +441,6 @@
       transform: translateY(-2px);
     }
 
-    #test2 {
-      outline: 0 !important;
-    }
-
     .bx--text-input__field-wrapper[data-invalid] #test2 {
       border: none !important;
     }
@@ -456,26 +453,69 @@
       opacity: 0;
       animation: $duration--slow-02 rotate 0.3s motion(standard, productive)
         forwards;
-      // animation: 1.5s rotate-two motion(standard, productive) 0.1s
-      //  forwards;
     }
   }
 
-  // .bx--form__helper-text {
-  //   transform: translate(16px, -32px);
-  //   animation: 2s move-helper-text cubic-bezier(0.4, 0.14, 0.3, 1) forwards;
-  // }
+  .input-animation-eleven,
+  .input-animation-twelve,
+  .input-animation-thirteen {
+    .bx--text-input__field-wrapper + .underline {
+      width: 0%;
+      height: 0;
+      max-height: 0;
+      background-color: #da1e28;
+      transition: 0.15s max-height 0.25s cubic-bezier(0.17, 0, 0, 1),
+        0.25s width 0.25s cubic-bezier(0.17, 0, 0, 1);
+    }
 
-  // input[data-invalid]:not(:focus) {
-  //    outline-color: pink !important;
-  // }
+    .bx--text-input__field-wrapper[data-invalid] + .underline {
+      width: 100%;
+      height: 2px;
+      max-height: 2px;
+    }
 
-  // input[data-invalid]:focus {
-  // // outline-color: pink !important;
-  // }
+    .bx--text-input-wrapper {
+      .bx--form-requirement {
+        transform: translateY(6px);
+        animation: 0.15s move-requirement-text 0.25s forwards;
+      }
+    }
+  }
+
+  .input-animation-eleven {
+    .bx--text-input-wrapper {
+      .bx--text-input__invalid-icon {
+        opacity: 0;
+        transform: scale(0.75) translateY(-50%);
+        animation: 0.75s shake-icon--eleven cubic-bezier(0.33, 0, 0.25, 1) 0.25s
+          forwards;
+      }
+    }
+  }
+
+  .input-animation-twelve {
+    .bx--text-input-wrapper {
+      .bx--text-input__invalid-icon {
+        opacity: 0;
+        transform: scale(0.75) translateY(-50%);
+        animation: 0.55s icon-pop cubic-bezier(0.26, 0.63, 0.31, 1) 0.38s
+          forwards;
+      }
+    }
+  }
+
+  .input-animation-thirteen {
+    .bx--text-input-wrapper {
+      .bx--text-input__invalid-icon {
+        opacity: 0;
+        transform: translateY(-70%);
+        animation: 0.4s icon-thirteen cubic-bezier(0.26, 0.63, 0.31, 1) 0.36s
+          forwards;
+      }
+    }
+  }
 
   // keyframes
-
   @keyframes icon-ten {
     0% {
       opacity: 0;
@@ -485,13 +525,6 @@
     }
     100% {
       opacity: 1;
-    }
-  }
-
-  @keyframes move-helper-text {
-    100% {
-      // transform: translate(16px, -32px);
-      // transform: translate(-10px, -50%);
     }
   }
 
@@ -555,7 +588,6 @@
     80% {
       transform: translate(-2%, -50%) rotate(-13deg);
     }
-
     100% {
       transform: translate(0, -50%) rotate(0);
     }
@@ -613,23 +645,18 @@
     15% {
       transform: translateY(-50%) rotate(-50deg);
     }
-
     30% {
       transform: translateY(-50%) rotate(50deg);
     }
-
     45% {
       transform: translateY(-50%) rotate(-25deg);
     }
-
     60% {
       transform: translateY(-50%) rotate(25deg);
     }
-
     75% {
       transform: translateY(-50%) rotate(25deg);
     }
-
     90% {
     }
   }
@@ -645,6 +672,84 @@
       width: 100%;
     }
   }
+
+  // for 12
+  @keyframes move-requirement-text {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shake-icon--eleven {
+    0% {
+      opacity: 0;
+      transform: translate(0, -50%);
+    }
+    5% {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+    10% {
+      transform: translate(-6px, -50%);
+    }
+    20% {
+      transform: translate(4px, -50%);
+    }
+    35% {
+      transform: translate(-5px, -50%);
+    }
+    50% {
+      transform: translate(6px, -50%);
+    }
+    70% {
+      transform: translate(-2px, -50%);
+    }
+    90% {
+      transform: translate(2px, -50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+  }
+
+  @keyframes icon-pop {
+    0% {
+      transform: scale(1.25) translateY(-50%);
+      opacity: 0;
+    }
+    45% {
+      transform: scale(1.4) translateY(-50%);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) translateY(-50%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes icon-thirteen {
+    0% {
+      transform: translateY(-70%);
+      opacity: 0;
+    }
+    15% {
+      transform: translateY(-70%);
+      opacity: 0;
+    }
+    45% {
+      transform: translateY(-20%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
+
+
   //-----------------------------
   // Inline Text Input
   //-----------------------------
